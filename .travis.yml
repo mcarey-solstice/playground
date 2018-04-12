@@ -6,16 +6,8 @@ language: generic
 
 install: true
 
-deploy:
-  provider: script
-  script:
-    - echo 'hello world'
-  on:
-    repo: mcarey-solstice/playground
-    all_branches: true
-    condition:
-      - $TRAVIS_BRANCH =~ ^master|dev|qa|prod$
-      - ${CONDITION+x} != x
-# deploy
+scripts:
+  - echo "${BASH_VERSION}"
+  - ./scripts/version.sh
 
 # .travis.yml
