@@ -7,7 +7,7 @@ language: generic
 install: true
 
 env:
-  ARRAY: (one two)
+  - ARRAY='(one two)'
 
 scripts:
   - ./scripts/pass-assoc-array.sh
