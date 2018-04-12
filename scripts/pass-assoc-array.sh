@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "${BASH_VERSION}"
+declare -p ARRAY
 
 # version

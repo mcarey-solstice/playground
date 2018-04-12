@@ -6,8 +6,12 @@ language: generic
 
 install: true
 
+env:
+  ARRAY:
+    - one
+    - two
+
 scripts:
-  - echo "${BASH_VERSION}"
-  - ./scripts/version.sh
+  - ./scripts/pass-assoc-array.sh
 
 # .travis.yml
