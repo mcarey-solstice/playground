@@ -9,7 +9,7 @@ install: true
 env:
   - ARRAY='(one two)'
 
-scripts:
+script:
   - ./scripts/pass-assoc-array.sh
 
 # .travis.yml
