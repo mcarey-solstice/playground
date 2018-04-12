@@ -15,7 +15,7 @@ deploy:
     all_branches: true
     condition:
       - $TRAVIS_BRANCH =~ ^master|dev|qa|prod$
-      - $TRAVIS_PULL_REQUEST = false
+      - ${CONDITION+x} != x
 # deploy
 
 # .travis.yml
