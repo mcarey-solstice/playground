@@ -1,0 +1,19 @@
+###
+#
+##
+
+install: true
+
+deploy:
+  provider: script
+  script:
+    - echo 'hello world'
+  on:
+    repo: mcarey-solstice/playground
+    all_branches: true
+    condition:
+      - $TRAVIS_BRANCH =~ ^master|dev|qa|prod$
+      - $TRAVIS_PULL_REQUEST = false
+# deploy
+
+# .travis.yml
