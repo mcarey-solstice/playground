@@ -8,7 +8,7 @@ install: true
 
 env:
   global:
-    - 'if [ $TRAVIS_PULL_REQUEST != "false" ]; then MESSAGE="hello world"; else MESSAGE="goodbye world"'
+    - 'MESSAGE=$(if [ $TRAVIS_PULL_REQUEST != "false" ]; then echo "hello world"; else echo "goodbye world")'
 
 deploy:
   provider: script
