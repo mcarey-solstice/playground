@@ -8,12 +8,14 @@ deploy:
   provider: script
   script:
     - echo 'hello world'
+    - exit 3
   on:
     repo: mcarey-solstice/playground
     all_branches: true
-    condition:
-      - $TRAVIS_BRANCH =~ ^master|dev|qa|prod$
-      - $TRAVIS_PULL_REQUEST = false
 # deploy
+
+after_deploy:
+  - echo "After the deployment"
+# after_deploy
 
 # .travis.yml
