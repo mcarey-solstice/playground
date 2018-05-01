@@ -6,11 +6,14 @@ language: bash
 
 install: true
 
+env:
+  global:
+    - 'if [ $TRAVIS_PULL_REQUEST != "false" ]; then MESSAGE="hello world"; else MESSAGE="goodbye world"'
+
 deploy:
   provider: script
   script:
-    - echo 'hello world'
-    - exit 3
+    - echo $MESSAGE
   on:
     repo: mcarey-solstice/playground
     all_branches: true
