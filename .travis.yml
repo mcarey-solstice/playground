@@ -16,7 +16,7 @@ deploy:
     - echo $MESSAGE
   on:
     repo: mcarey-solstice/playground
-    all_branches: true
+    branch: master
 # deploy
 
 after_deploy:
