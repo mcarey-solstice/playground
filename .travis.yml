@@ -6,9 +6,9 @@ language: bash
 
 install: true
 
-env:
-  global:
-    - 'MESSAGE=$(if [ $TRAVIS_PULL_REQUEST != "false" ]; then echo "hello world"; else echo "goodbye world")'
+before_deploy:
+  - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && export MESSAGE="pull request" || export MESSAGE="not pull request"'
+# before_deploy
 
 deploy:
   provider: script
