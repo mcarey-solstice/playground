@@ -7,9 +7,9 @@ language: generic
 install: true
 
 env:
-  - ARRAY='(one two)'
+  - STR=foobar 
 
 script:
-  - ./scripts/pass-assoc-array.sh
+  - 'echo ${STR^^}' 
 
 # .travis.yml
