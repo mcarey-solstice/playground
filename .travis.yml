@@ -7,9 +7,14 @@ language: generic
 install: true
 
 env:
-  - STR=foobar 
+  global:
+    - DEV_STR=dev_foobar
+    - QA_STR=qa_foobar
+    - PROD_STR=prod_foobar
+    - BUILD=dev
 
 script:
-  - 'echo ${STR^^}' 
+  - 'STR_VAR=${BUILD^^}_STR && export STR=${!STR_VAR}'
+  - 'echo $STR'
 
 # .travis.yml
