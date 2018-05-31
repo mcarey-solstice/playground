@@ -13,6 +13,10 @@ env:
     - PROD_STR=prod_foobar
     - BUILD=dev
 
+before_install:
+  - 'case $TRAVIS_BRANCH in master ) export BUILD=prod ;; qa ) export BUILD=qa  ;; dev ) export BUILD=dev ;; esac'
+  - echo $BUILD 
+
 script:
   - 'STR_VAR=${BUILD^^}_STR && export STR=${!STR_VAR}'
   - 'echo $STR'
