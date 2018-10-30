@@ -2,14 +2,7 @@
 #
 ##
 
-language: generic
-
+language: java
 install: true
-
-env:
-  - ARRAY='(one two)'
-
-script:
-  - ./scripts/pass-assoc-array.sh
 
 # .travis.yml
