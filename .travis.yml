@@ -2,6 +2,10 @@
 #
 ##
 
+sudo: true
+services:
+  - docker
+
 language: generic
 
 install: true
@@ -11,5 +15,8 @@ env:
 
 script:
   - ./scripts/pass-assoc-array.sh
+
+after_script:
+  - docker build .
 
 # .travis.yml
